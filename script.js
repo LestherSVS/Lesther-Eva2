@@ -96,5 +96,4 @@ function formatDate(isoDate) {
   return `${d}/${m}/${y}`;
 }
 
-// Inicializa la tabla, promedio y stats al cargar la página
 renderTable();
