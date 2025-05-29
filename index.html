@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notas Front-End Lesther</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <style>
+    #average {
+      margin: 16px 0;
+      padding: 10px;
+      background-color: #fffbfb;
+      border: 1px solid #04167c;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #001488;
+    }
+    #stats p {
+      margin: 4px 0;
+      font-weight: 600;
+      color: #00ff40;
+    }
+  </style>
+</head>
+<body>
+  <h2>Notas Front-End</h2>
+
+  <div id="average">Promedio General del Curso : N/A</div>
+  <div id="stats">
+    <p>Total de estudiantes: 0</p>
+    <p>Estudiantes que deben rendir examen: 0</p>
+    <p>Estudiantes eximidos: 0</p>
+  </div>
+
+  <form id="studentForm">
+    <input type="hidden" id="editIndex" value="" />
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required />
+    </div>
+    <div>
+      <label for="lastName">Apellido:</label>
+      <input type="text" id="lastName" required />
+    </div>
+    <div>
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" required />
+    </div>
+    <div>
+      <label for="grade">Nota:</label>
+      <input type="number" id="grade" step="0.1" min="1" max="7" required />
+    </div>
+    <button type="submit" id="submitButton">Guardar Alumno</button>
+  </form>
+
+  <table id="studentsTable" border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha</th>
+        <th>Nota</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
